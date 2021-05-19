@@ -1,0 +1,26 @@
+<div class="container" align="center">
+    <h1 (click)="showForm()" style="cursor: pointer;user-select: none;font-weight: bold;">Quotes<span style="font-size: 0.9rem;">+</span></h1>
+    <div @fade class="container" *ngIf="this.addquote" align="left">
+        <form class="form-login" [formGroup]="addQuote" (ngSubmit)="addQuotes()">
+            <!-- <h3 class="h3 mb-3 font-weight-normal text-center">Log In</h3> -->
+            <div class="form-group">
+                <label>UserName</label>
+                <input type="text" class="form-control" formControlName="uname" placeholder="Enter Username">
+                <br>
+                <label>Quote</label>
+                <textarea class="form-control" formControlName="quote" rows="2"></textarea><br>
+                <label>Author</label>
+                <input type="text" class="form-control" formControlName="author">
+            </div><br>
+            <button type="submit" class="btn btn-block btn-outline-primary" [disabled]="addQuote.invalid">Add Quote</button>
+            <hr>
+        </form>
+    </div><br>
+    <!-- {{addQuote.value | json}} -->
+    <div *ngFor="let quote of quotes">
+        <h3>{{quote.uname}}</h3>
+        <h4><q>{{quote.quote}}</q></h4>
+        <h5><strong>- {{quote.author}}</strong></h5>
+        <hr>
+    </div>
+</div>
