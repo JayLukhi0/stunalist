@@ -1,15 +1,8 @@
-/* @import '@angular/material/prebuilt-themes/deeppurple-amber.css';
-
-.navbar{
-     justify-content: space-between;
-}
-span{
-    padding-right: 1rem;
-} */
-/* .navbar-right{
-    width: 100%;
-    float: right;
-} */
 div{
     justify-content: space-between;
+}
+
+.navbar{
+    background-color:rgba(0,0,0,0.2);
+    /* background-color: aqua; */
 }

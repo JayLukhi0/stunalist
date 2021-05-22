@@ -30,4 +30,9 @@ export class StunalistService {
   postQuote(qoute:Quote):Observable<any>{
     return this._http.post<any>(this.url + "addquote",qoute);
   }
+
+  //For Contact us
+  sendMessage(msg){
+    return msg;
+  }
 }

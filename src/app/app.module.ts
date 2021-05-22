@@ -3,6 +3,7 @@ import { BrowserModule } from '@angular/platform-browser';
 
 import {HttpClientModule} from '@angular/common/http';
 import {ReactiveFormsModule,FormsModule} from '@angular/forms';
+import { NgbCollapseModule } from '@ng-bootstrap/ng-bootstrap';
 
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
@@ -10,6 +11,7 @@ import { ArticleComponent } from './article/article.component';
 import { QuoteComponent } from './quote/quote.component';
 import { HomeComponent } from './home/home.component';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
+import { ContactComponent } from './contact/contact.component';
 
 
 @NgModule({
@@ -17,7 +19,8 @@ import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
     AppComponent,
     ArticleComponent,
     QuoteComponent,
-    HomeComponent
+    HomeComponent,
+    ContactComponent
   ],
   imports: [
     BrowserModule,
@@ -25,7 +28,8 @@ import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
     HttpClientModule,
     BrowserAnimationsModule,
     ReactiveFormsModule,
-    FormsModule
+    FormsModule,
+    NgbCollapseModule
   ],
   providers: [],
   bootstrap: [AppComponent]

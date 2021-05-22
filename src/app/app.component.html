@@ -1,24 +1,19 @@
-<nav class="navbar navbar-expand-lg navbar-light m-1 bg-light">
+<nav class="navbar navbar-expand-lg navbar-light m-1">
     <div class="container-fluid">
-      <div>
+
         <a class="navbar-brand" href="#">Stunalist</a>
-        <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+        <button class="navbar-toggler" type="button" data-bs-toggle="collapse" (click)="isMenuCollapsed = !isMenuCollapsed" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
           <span class="navbar-toggler-icon"></span>
         </button>
-      </div>
-      <div>
-
-        <div class="collapse navbar-collapse" id="navbarNav">
-          <ul class="navbar-nav navbar-right">
+        <div class="collapse navbar-collapse" id="navbarNav" [ngbCollapse]="isMenuCollapsed">
+          <ul class="navbar-nav ml-auto">
             <li class="nav-item">
               <a class="nav-link active" aria-current="page" routerLink="/home">Home</a>
             </li>
             <li class="nav-item">
               <a class="nav-link" routerLink="/article">Articles</a>
             </li>
-            <!-- <li class="nav-item">
-              <a class="nav-link" href="#">Blogs</a>
-            </li> -->
+   
             <li class="nav-item">
               <a class="nav-link" routerLink="/quote">Quotes</a>
             </li>
@@ -27,9 +22,12 @@
             <li class="nav-item">
               <a class="nav-link" routerLink="/">About Us</a>
             </li>
+            <li class="nav-item">
+              <a class="nav-link" routerLink="/contact">Contact Us</a>
+            </li>
             
           </ul>
-        </div>
+       
       </div>
     </div>
     </nav>
