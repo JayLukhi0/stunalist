@@ -1,6 +1,6 @@
 <div class="container" align="center">
     <h1 (click)="showForm()" style="cursor: pointer;user-select: none;font-weight: bold;"><span style="background-color: rgba(red, green, blue,) ;display: inline-block;">Articles</span><span style="font-size: 0.9rem;">+</span></h1>
-    <div @fade class="container" *ngIf="this.addarticle" align="left">
+    <div @fade class="container w-75" *ngIf="this.addarticle" align="left">
         <form class="form-login" [formGroup]="addArticle" (ngSubmit)="addArticles()">
             <!-- <h3 class="h3 mb-3 font-weight-normal text-center">Log In</h3> -->
             <div class="form-group">
@@ -12,7 +12,9 @@
                 <label>Description</label>
                 <textarea class="form-control" formControlName="desc" rows="3"></textarea><br>
             </div><br>
-            <button type="submit" class="btn btn-block btn-outline-primary" [disabled]="addArticle.invalid">Add Article</button>
+            <div class="d-grid">
+                <button type="submit" class="btn btn-block btn-outline-secondary" [disabled]="addArticle.invalid">Add Article</button>
+            </div>
             <hr>
         </form>
     </div><br>
@@ -21,7 +23,7 @@
         <div class="card mb-4 w-100" >
             <div class="card-body">
               <h2 class="card-title fs-3">{{article.title}}</h2>
-              <pre class="card-text"><p style="font-size:1.1rem ;">{{article.desc}}</p></pre><hr>
+              <pre class="card-text"><p style="font-size:1.1rem; ">{{article.desc}}</p></pre><hr>
               <div class="card-text text-end">{{article.uname}}</div>
             </div>
         </div>

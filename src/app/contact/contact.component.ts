@@ -1,3 +1,4 @@
+import { animate, style, transition, trigger } from '@angular/animations';
 import { OnInit,Component } from '@angular/core';
 import { FormGroup, FormBuilder, Validators } from '@angular/forms';
 import { StunalistService } from '../stunalist.service';
@@ -6,7 +7,15 @@ import { StunalistService } from '../stunalist.service';
 @Component({
   selector: 'app-contact',
   templateUrl: './contact.component.html',
-  styleUrls: ['./contact.component.css']
+  styleUrls: ['./contact.component.css'],
+  animations:[
+    trigger('fade',[
+      transition('void=>*',[
+        style({opacity:0,height:0}),
+        animate(1500)
+      ])
+    ])
+  ]
 })
 export class ContactComponent implements OnInit {
 

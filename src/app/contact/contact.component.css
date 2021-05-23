@@ -7,3 +7,13 @@
     height: 100%; */
     /* background-color: black; */
 }
+
+.form1{
+    border: 3px solid rgba(131, 24, 24, 0.466);
+    /* border-radius: 15px;
+    box-shadow: 3px 5px 5px; */
+    border-radius: 15px;
+    background: rgba(129, 27, 27, 0.158);
+    box-shadow:  20px 20px 35px rgba(131, 24, 24, 0.699)
+}
+

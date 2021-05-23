@@ -1,6 +1,11 @@
 /* You can add global styles to this file, and also import other style files */
+@import url('https://fonts.googleapis.com/css2?family=KoHo:wght@200&display=swap');
+*{
+    font-family: 'KoHo', sans-serif;
+    font-weight: bolder;
+}
 body{
-    background-image:url("src\assets\images.jpg");
+    background-image:url("src\assets\YBhoZi.jpg");
     background-attachment: fixed;
     background-position: center;
     background-repeat: no-repeat;

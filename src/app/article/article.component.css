@@ -1,6 +1,10 @@
 input{
     border-radius: 20px 20px;
 }
+
+.btn{
+    border-radius: 20px 20px;
+}
 textarea{
     border-top-left-radius: 35px 50%;
     border-bottom-left-radius: 35px 50%;
