@@ -1,6 +1,6 @@
 <div class="container" align="center">
     <h1 (click)="showForm()" style="cursor: pointer;user-select: none;font-weight: bold;">Quotes<span style="font-size: 0.9rem;">+</span></h1>
-    <div @fade class="container w-75" *ngIf="this.addquote" align="left">
+    <div @fade class="container w-75 quoteForm pt-3 pb-3" *ngIf="this.addquote" align="left">
         <form class="form-login" [formGroup]="addQuote" (ngSubmit)="addQuotes()">
             <!-- <h3 class="h3 mb-3 font-weight-normal text-center">Log In</h3> -->
             <div class="form-group">
@@ -15,7 +15,6 @@
             <div class="d-grid">
                 <button type="submit" class="btn btn-block btn-outline-secondary" [disabled]="addQuote.invalid">Add Quote</button>
             </div>
-            <hr>
         </form>
     </div><br>
     <!-- {{addQuote.value | json}} -->
@@ -27,6 +26,5 @@
             <h3><q>{{quote.quote}}</q></h3>
             <h4><strong>- {{quote.author}}</strong></h4>
         </div>
-        <!-- <hr style="color:rgba(0,0,0,0);"> -->
     </div>
 </div>

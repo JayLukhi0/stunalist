@@ -31,7 +31,6 @@ export class ContactComponent implements OnInit {
     'contactFormEmail': ['', Validators.compose([Validators.required, Validators.email])],
     'contactFormSubjects': ['', Validators.required],
     'contactFormMessage': ['', Validators.required],
-    'contactFormCopy': [''],
     });
   }
 

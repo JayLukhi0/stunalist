@@ -1,7 +1,8 @@
 .text-typing {
     border-radius:50px;
-    font-size: 1.4rem;
+    font-size: 1.1rem;
     padding: 3% 0;
+    display: inline-block;
 }
 .text-typing p {
     margin:0px;
@@ -16,7 +17,7 @@
 }
 
 .sloganP{
-    padding: 7% 0;
+    padding: 5% 0;
     font-size: large;
     width: 50%; 
     display: inline-block;

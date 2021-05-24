@@ -1,7 +1,7 @@
 /* You can add global styles to this file, and also import other style files */
-@import url('https://fonts.googleapis.com/css2?family=KoHo:wght@200&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Special+Elite&display=swap');
 *{
-    font-family: 'KoHo', sans-serif;
+    font-family: 'Special Elite', cursive !important;
     font-weight: bolder;
 }
 body{
