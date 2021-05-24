@@ -8,3 +8,8 @@ div{
 a{
     font-weight: bold;
 }
+
+.active{
+    font-weight: bolder;
+    color: white !important;
+}
