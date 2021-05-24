@@ -1,6 +1,4 @@
 .text-typing {
-    /* padding:20px 30px; */
-    /* font-family:monospace; */
     border-radius:50px;
     font-size: 1.4rem;
     padding: 3% 0;
@@ -18,7 +16,7 @@
 }
 
 .sloganP{
-    padding: 3% 0;
+    padding: 7% 0;
     font-size: large;
     width: 50%; 
     display: inline-block;

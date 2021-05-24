@@ -19,10 +19,14 @@
         </form>
     </div><br>
     <!-- {{addQuote.value | json}} -->
-    <div *ngFor="let quote of quotes">
-        <h3>{{quote.uname}}</h3>
-        <h4><q>{{quote.quote}}</q></h4>
-        <h5><strong>- {{quote.author}}</strong></h5>
-        <hr>
+    <div *ngFor="let quote of quotes" >
+        <br>
+        <div class="quote">
+            <br>
+            <h2>{{quote.uname}}</h2>
+            <h3><q>{{quote.quote}}</q></h3>
+            <h4><strong>- {{quote.author}}</strong></h4>
+        </div>
+        <!-- <hr style="color:rgba(0,0,0,0);"> -->
     </div>
 </div>
