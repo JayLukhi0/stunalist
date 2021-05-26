@@ -12,7 +12,7 @@ import { StunalistService } from '../stunalist.service';
     trigger('fade',[
       transition('void=>*',[
         style({opacity:0,height:0}),
-        animate(1500)
+        animate(2000)
       ])
     ])
   ]

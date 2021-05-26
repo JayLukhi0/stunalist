@@ -38,3 +38,11 @@ textarea{
     background-color: rgba(0, 0, 0, 0);
     font-weight: bold;
 }
+
+.articleDisc{
+  text-align: left;
+  white-space: pre-line;
+  font-size:1.1rem;
+  height:370px ;
+  overflow: auto;
+}
