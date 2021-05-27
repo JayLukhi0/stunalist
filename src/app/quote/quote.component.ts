@@ -22,13 +22,16 @@ export class QuoteComponent implements OnInit {
   quotes;
   addquote=false;
   addQuote:FormGroup;
+  uName;
 
   constructor(private _stunalistService:StunalistService) { 
-      this.addQuote = new FormGroup({
-        uname : new FormControl('',Validators.required),
-        quote : new FormControl('',Validators.required),
-        author : new FormControl('',Validators.required)
-      })
+    this.uName = _stunalistService.getUname();
+    
+    this.addQuote = new FormGroup({
+      uname : new FormControl(this.uName,Validators.required),
+      quote : new FormControl('',Validators.required),
+      author : new FormControl('',Validators.required)
+    })
   }
 
   ngOnInit(): void {

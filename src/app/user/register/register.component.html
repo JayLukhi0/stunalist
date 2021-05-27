@@ -1,0 +1,24 @@
+<div class="container" align="center" style="height: 82%;">
+    <h1 style="cursor: pointer;user-select: none;font-weight: bold;">Sign Up</h1>
+
+    <div class="form1 w-75 p-4 text-start">
+        <form [formGroup]="register" (ngSubmit)="onSubmit()">
+            <div class="mb-3">
+                <label for="name" class="form-label">UserName</label>
+                <input type="text" class="form-control" formControlName="uname" id="name">
+            </div>
+            <div class="mb-3">
+                <label for="email" class="form-label">Email</label>
+                <input type="email" formControlName="email" class="form-control" id="email">
+            </div>
+            <div class="mb-3">
+                <label for="email" class="form-label">Password</label>
+                <input type="password" formControlName="pswd" class="form-control" id="email">
+            </div>
+            <div class="d-grid">
+                <button class="btn btn-secondary btn-block" type="submit" [disabled]="register.invalid">Sign Up</button>
+            </div>
+        </form>
+    </div>
+    <!-- {{register.value | json}} -->
+</div>

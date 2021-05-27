@@ -11,7 +11,7 @@ import { StunalistService } from '../stunalist.service';
   animations:[
     trigger('fade',[
       transition('void=>*',[
-        style({opacity:0,height:0}),
+        style({opacity:0}),
         animate(2000)
       ])
     ])

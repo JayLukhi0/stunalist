@@ -21,10 +21,12 @@ export class ArticleComponent implements OnInit {
   articles;
   addarticle=false;
   addArticle:FormGroup;
+  uName;
 
   constructor(private _stunalistService:StunalistService) {
+    this.uName = _stunalistService.getUname();
     this.addArticle = new FormGroup({
-      uname:new FormControl('',Validators.required),
+      uname:new FormControl(this.uName,Validators.required),
       title:new FormControl('',Validators.required),
       desc:new FormControl('',Validators.required)
     })

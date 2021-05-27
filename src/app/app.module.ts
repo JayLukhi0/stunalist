@@ -1,7 +1,7 @@
 import { NgModule } from '@angular/core';
 import { BrowserModule } from '@angular/platform-browser';
 
-import {HttpClientModule} from '@angular/common/http';
+import {HttpClientModule,HTTP_INTERCEPTORS} from '@angular/common/http';
 import {ReactiveFormsModule,FormsModule} from '@angular/forms';
 import { NgbCollapseModule } from '@ng-bootstrap/ng-bootstrap';
 
@@ -14,6 +14,12 @@ import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { ContactComponent } from './contact/contact.component';
 import { FooterComponent } from './footer/footer.component';
 import { AboutusComponent } from './aboutus/aboutus.component';
+import {LoginComponent} from './user/login/login.component';
+import {RegisterComponent} from './user/register/register.component';
+import { StunalistGuard } from './stunalist.guard';
+import { StunalistService } from './stunalist.service';
+import { StunalistInterceptor } from './stunalistconfig.interceptor';
+import { PageNotFoundComponent } from './page-not-found/page-not-found.component';
 
 
 @NgModule({
@@ -24,7 +30,10 @@ import { AboutusComponent } from './aboutus/aboutus.component';
     HomeComponent,
     ContactComponent,
     FooterComponent,
-    AboutusComponent
+    AboutusComponent,
+    LoginComponent,
+    RegisterComponent,
+    PageNotFoundComponent
   ],
   imports: [
     BrowserModule,
@@ -33,9 +42,14 @@ import { AboutusComponent } from './aboutus/aboutus.component';
     BrowserAnimationsModule,
     ReactiveFormsModule,
     FormsModule,
-    NgbCollapseModule
+    NgbCollapseModule,
+    
   ],
-  providers: [],
+  providers: [StunalistGuard,StunalistService,{
+    provide:HTTP_INTERCEPTORS,
+    useClass:StunalistInterceptor,
+    multi:true
+  }],
   bootstrap: [AppComponent]
 })
 export class AppModule { }
