@@ -1,5 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import { FormControl, FormGroup, Validators } from '@angular/forms';
+import { Router } from '@angular/router';
 import { StunalistService } from 'src/app/stunalist.service';
 
 @Component({
@@ -10,7 +11,11 @@ import { StunalistService } from 'src/app/stunalist.service';
 export class LoginComponent implements OnInit {
 
   login:FormGroup;
-  constructor(private _stunalistService:StunalistService) { }
+  constructor(private _stunalistService:StunalistService,private _router:Router) {
+    if (_stunalistService.isLoggedIn()) {
+      _router.navigate(['/home'])
+    }
+   }
 
   ngOnInit(): void {
     this.login = new FormGroup({
